@@ -64,7 +64,9 @@ function createCardContainer(cardList, period, lastPeriod) {
 
   ${cardList.map(card =>`
   <div class="card_container card_container--${(card.title).split(" ").join("").toLowerCase()}">
-  <div class="card_image--${(card.title).split(" ").join("").toLowerCase()}"></div>
+  <div class="card_image--${(card.title).split(" ").join("").toLowerCase()}">
+  
+  </div>
   <div class="card card--${(card.title).split(" ").join("").toLowerCase()}">
     <div class="card__header">
       <h3 class="card__title">${card.title}</h3>
@@ -84,3 +86,4 @@ function createCardContainer(cardList, period, lastPeriod) {
 }
 
 
+// < img src="/images/icon-${(card.title).split(" ").join("").toLowerCase()}.svg" alt="${(card.title)}">
