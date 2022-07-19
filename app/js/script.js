@@ -3,7 +3,7 @@ async function start(period = "weekly") {
   const errorMessage = document.getElementById('errorMessage')
 
   try {
-    const response = await fetch('../data.json');
+    const response = await fetch('data.json');
     const data = await response.json();
    
     createCardContainer(data,period, "Last Week")
