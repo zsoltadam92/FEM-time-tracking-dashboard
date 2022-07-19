@@ -2,7 +2,7 @@
 
 @mixin cardImageBg ($title){
   .card_image--#{$title} {
-    background: url('images/icon-#{$title}.svg') var(colors-background-#{$title}) no-repeat 90% -5px;
+    background: url('images\icon-#{$title}.svg') var(colors-background-#{$title}) no-repeat 90% -5px;
     height: 95px;
     margin-bottom: -50px;
     border-radius: rem(10);
@@ -20,3 +20,4 @@
     @content;
   }
 }
+
