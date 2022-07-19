@@ -55,9 +55,3 @@ function watchTask() {
 
 //Default Gulp Task
 exports.default = series(scssTask,jsTask,browserSyncServe,watchTask);
-
-module.exports = {
-  kit: {
-    floc: true
-  }
-};
