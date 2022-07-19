@@ -4,12 +4,13 @@
   .card_image--#{$title} {
     // background: url(../../../images/icon-#{$title}.svg) var(colors-background-#{$title}) no-repeat 90% -5px;
     background-color: var(colors-background-#{$title});
-    background-image: url(../../../images/icon-#{$title}.svg);
-    background-repeat: no-repeat;
-    background-position: 90% -5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
     height: 95px;
     margin-bottom: -50px;
     border-radius: rem(10);
+    overflow: hidden;
   }
 }
 

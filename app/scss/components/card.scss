@@ -4,7 +4,14 @@
   background: var(colors-background-card);
   padding: rem(20);
   border-radius: rem(10);
-  
+  position: relative;
+
+  &__bg-image {
+    position: relative;
+    top: rem(-5);
+    right: 6%;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
