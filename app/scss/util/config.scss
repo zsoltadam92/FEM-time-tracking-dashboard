@@ -1,0 +1,46 @@
+$config: (
+  //640px,1150px, 1400px
+  breakpoints_up: (
+    medium: 40em,
+    large: 71.875em,
+    xlarge: 87.5em,
+  ),
+
+  //639px,1149px, 1399px
+  breakpoints_down: (
+    small: 39.9375em,
+    medium: 71.8125em,
+    large: 87.4375em,
+  ),
+
+  colors: (
+    background: (
+      body: hsl(226, 43%, 10%),
+      card:  hsl(235, 46%, 20%),
+      Jeremy: hsl(246, 80%, 60%),
+      work: hsl(15, 100%, 70%),
+      play: hsl(195, 74%, 62%),
+      study: hsl(348, 100%, 68%),
+      exercise: hsl(145, 58%, 55%),
+      social: hsl(264, 64%, 52%),
+      selfcare: hsl(43, 84%, 65%),
+    ),
+    text: (
+      daily: hsl(235, 45%, 61%),
+      report: hsl(236, 100%, 87%),
+      light: hsl(236, 68%, 95%),
+    )
+  ),
+
+  font: (
+    family: Rubik,
+    weights: (
+      light: 300,
+      regular: 400,
+      medium: 500,
+    ),
+  ),
+
+  );
+  
+  $titles: work play study exercise social selfcare;

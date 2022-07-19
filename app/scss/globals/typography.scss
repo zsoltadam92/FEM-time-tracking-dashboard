@@ -1,0 +1,26 @@
+@use 'util' as *;
+
+h1 {
+  font-size: rem(30);
+  font-weight: var(font-weights-light);
+  margin: 0 ;
+  padding-bottom: rem(40);
+
+  @include breakpoints_up(var(breakpoints_up-medium)) {
+    font-size: rem(40);
+  }
+
+  @include breakpoints_up(var(breakpoints_up-large)) {
+    margin-bottom: rem(10);
+  }
+}
+
+h3 {
+  font-weight: var(font-weights-medium);
+  margin-top: 0;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+  margin: rem(11) 0;
+}

@@ -1,0 +1,22 @@
+@use 'functions' as *;
+
+@mixin cardImageBg ($title){
+  .card_image--#{$title} {
+    background: url('../../../images/icon-#{$title}.svg') var(colors-background-#{$title}) no-repeat 90% -5px;
+    height: 95px;
+    margin-bottom: -50px;
+    border-radius: rem(10);
+  }
+}
+
+@mixin breakpoints_down($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin breakpoints_up($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}

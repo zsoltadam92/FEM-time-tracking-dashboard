@@ -1,0 +1,30 @@
+@use 'util' as *;
+
+.nav {
+  background: var(colors-background-card);
+  border-radius: rem(10);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: rem(30) rem(20) rem(10) rem(40);  
+  
+  @include breakpoints_up(var(breakpoints_up-medium)) {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: rem(35) rem(20) rem(15) rem(40); 
+  }
+
+  &__item {
+    font-size: rem(22);
+    color: var(colors-text-daily);
+    cursor: pointer;
+    
+    &:hover, &:active{
+      color: var(colors-text-light);
+    }
+  }
+
+  .active {
+    color: var(colors-text-light);
+  }
+}

@@ -1,0 +1,10 @@
+@use 'util' as *;
+
+.error-text {
+  text-align: center;
+  background-color: #d41a1a;
+  color: white;
+  font-size: rem(18);
+  padding: rem(10);
+  border-radius: rem(4);
+}

@@ -1,0 +1,37 @@
+@use 'config' as *;
+@use "sass:string";
+@use "sass:map";
+@use "sass:list";
+@use "sass:math";
+
+
+// to use $config
+@function get-keys($string, $separator: "-"){
+  $keys: ();
+  $index: string.index($string,$separator);
+
+  @while $index {
+    $key: string.slice($string,1,$index - 1);
+    $keys: list.append($keys,$key);
+    $string: string.slice($string, $index + 1);
+    $index: string.index($string, $separator);
+  }
+  $keys: list.append($keys, $string);
+
+  @return $keys;
+}
+
+@function var($string, $data: $config){
+  $keys: get-keys($string);
+
+  @each $key in $keys {
+    $data: map.get($data, $key);
+  }
+
+  @return $data;
+}
+
+//px to rem
+@function rem($pixels, $context: 16) {
+  @return (math.div($pixels,$context)) * 1rem;
+}

@@ -1,0 +1,63 @@
+@use 'util' as *;
+
+.card {
+  background: var(colors-background-card);
+  padding: rem(20);
+  border-radius: rem(10);
+  
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(-15);
+    
+    @include breakpoints_up(var(breakpoints_up-medium)) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__ellipsis:hover {
+    filter: brightness(150%);
+    cursor: pointer;
+  }
+
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoints_up(var(breakpoints_up-medium)) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    font-size: rem(22);
+  }
+
+  &__time {
+    font-size: rem(40);
+    margin: 0;
+    font-weight: var(font-weights-light);
+    
+    @include breakpoints_up(var(breakpoints_up-medium)) {
+      font-size: rem(60);
+    }
+  }
+
+  &__last_week {
+    color: var(colors-text-daily);
+    font-size: rem(14);
+
+    @include breakpoints_up(var(breakpoints_up-large)) {
+      font-size: rem(16);
+    }
+  }
+}
+
+
+// card top content
+@each $value in $titles {
+  @include cardImageBg($value);
+}

@@ -1,0 +1,37 @@
+@use 'util' as *;
+
+.person {
+
+  background-color: var(colors-background-Jeremy);
+  padding: rem(16) rem(40) rem(20) rem(16);
+  margin-bottom: rem(-20);
+  border-radius: rem(10);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(20);
+
+  @include breakpoints_up(var(breakpoints_up-medium)) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: rem(40) rem(40) rem(10) rem(20);
+  }
+
+
+  &__image {
+    width: rem(90);
+    height: rem(90);
+    border: solid rem(3) white;
+    border-radius: 50%;
+  }
+
+  &__subtext{
+    font-size: rem(16);
+    color: var(colors-text-report);
+    font-weight: var(font-weights-light);
+    margin: rem(30) 0 0 0 ;
+  }
+  
+
+}
