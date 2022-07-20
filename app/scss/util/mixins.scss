@@ -2,7 +2,6 @@
 
 @mixin cardImageBg ($title){
   .card_image--#{$title} {
-    // background: url(../../../images/icon-#{$title}.svg) var(colors-background-#{$title}) no-repeat 90% -5px;
     background-color: var(colors-background-#{$title});
     display: flex;
     justify-content: flex-end;

@@ -4,7 +4,6 @@
   background: var(colors-background-card);
   border-radius: rem(10);
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   padding: rem(30) rem(20) rem(10) rem(40);  
   
@@ -18,6 +17,10 @@
     font-size: rem(22);
     color: var(colors-text-daily);
     cursor: pointer;
+
+    @include breakpoints_down(var(breakpoints_down-small)) {
+      margin-right: rem(15);
+    }
     
     &:hover, &:active{
       color: var(colors-text-light);

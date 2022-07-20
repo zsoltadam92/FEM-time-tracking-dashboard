@@ -3,7 +3,7 @@
 .person {
 
   background-color: var(colors-background-Jeremy);
-  padding: rem(16) rem(40) rem(20) rem(16);
+  padding: rem(16) rem(40) rem(20) rem(40);
   margin-bottom: rem(-20);
   border-radius: rem(10);
   position: relative;
@@ -15,7 +15,7 @@
   @include breakpoints_up(var(breakpoints_up-medium)) {
     flex-direction: column;
     align-items: flex-start;
-    padding: rem(40) rem(40) rem(10) rem(20);
+    padding: rem(40) rem(40) rem(10) rem(40);
   }
 
 

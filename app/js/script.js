@@ -26,26 +26,11 @@ window.addEventListener("DOMContentLoaded", () => {
   start()
 })
 
-
-function changePeriod(period, data, lastPeriod) {
-  document.getElementById(period).addEventListener("click", () =>{
-    const navItems = document.querySelectorAll('.nav__item')
-    const cards = document.querySelectorAll('.card')
-    cards.forEach((card,index) => {
-      card.querySelector('.card__time'). innerHTML = `${data[index].timeframes[period].current}hrs`
-      card.querySelector('.card__last_week'). innerHTML = `${lastPeriod} - ${data[index].timeframes[period].previous}hrs`
-    })
-
-    navItems.forEach(item => {
-      item.classList.remove('active')
-    })
-
-    document.getElementById(period).classList.add('active')
-  })
-}
-
-
 function createCardContainer(cardList, period, lastPeriod) { 
+  function titleLowerCase(card) {
+    return (card.title).split(" ").join("").toLowerCase()
+  }
+
   document.getElementById('container').innerHTML += `
   <div class="main">
     <div class="person">
@@ -62,12 +47,13 @@ function createCardContainer(cardList, period, lastPeriod) {
     </div>
   </div>
 
-  ${cardList.map(card =>`
-  <div class="card_container card_container--${(card.title).split(" ").join("").toLowerCase()}">
-  <div class="card_image--${(card.title).split(" ").join("").toLowerCase()}">
-    <img class="card__bg-image" src="images/icon-${(card.title).split(" ").join("").toLowerCase()}.svg" alt="${(card.title)}">
+  ${cardList.map(card =>
+    `
+  <div class="card_container">
+  <div class="card_image--${titleLowerCase(card)}">
+    <img class="card__bg-image" src="images/icon-${titleLowerCase(card)}.svg" alt="${(card.title)}">
   </div>
-  <div class="card card--${(card.title).split(" ").join("").toLowerCase()}">
+  <div class="card card--${titleLowerCase(card)}">
     <div class="card__header">
       <h3 class="card__title">${card.title}</h3>
       <div>
@@ -85,5 +71,19 @@ function createCardContainer(cardList, period, lastPeriod) {
     `
 }
 
+function changePeriod(period, data, lastPeriod) {
+  document.getElementById(period).addEventListener("click", () =>{
+    const navItems = document.querySelectorAll('.nav__item')
+    const cards = document.querySelectorAll('.card')
+    cards.forEach((card,index) => {
+      card.querySelector('.card__time'). innerHTML = `${data[index].timeframes[period].current}hrs`
+      card.querySelector('.card__last_week'). innerHTML = `${lastPeriod} - ${data[index].timeframes[period].previous}hrs`
+    })
 
-{/* < img class="card__bg-image src="/images/icon-${(card.title).split(" ").join("").toLowerCase()}.svg" alt="${(card.title)}"> */}
+    navItems.forEach(item => {
+      item.classList.remove('active')
+    })
+
+    document.getElementById(period).classList.add('active')
+  })
+}

@@ -51,6 +51,10 @@
     @include breakpoints_up(var(breakpoints_up-medium)) {
       font-size: rem(60);
     }
+
+    @include breakpoints_down(var(breakpoints_down-small)) {
+      margin-right: rem(14);
+    }
   }
 
   &__last_week {
