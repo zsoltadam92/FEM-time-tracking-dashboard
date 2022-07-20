@@ -59,8 +59,11 @@
 
   &__last_week {
     color: var(colors-text-daily);
-    font-size: rem(14);
+    font-size: rem(20);
 
+    @include breakpoints_up(var(breakpoints_up-medium)) {
+      font-size: rem(14);
+    }
     @include breakpoints_up(var(breakpoints_up-large)) {
       font-size: rem(16);
     }
