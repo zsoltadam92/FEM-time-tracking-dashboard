@@ -61,7 +61,7 @@ function createCardContainer(cardList, period, lastPeriod) {
       </div>
     </div>
     <div class="card__info">
-      <p class="card__time" id="currentTime">${card.timeframes[period].current}hrs</p>
+      <p class="card__time">${card.timeframes[period].current}hrs</p>
       <p class="card__last_week">${lastPeriod} - ${card.timeframes[period].previous}hrs</p>
     </div>
   </div>
